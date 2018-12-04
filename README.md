@@ -9,4 +9,11 @@ use boto3 to manage AWS EC2
 2. install boto3 on pipenv
 3. configure aws cli 'adding profile'.
 4. test script with ipython in pipenv
-5. pipenv run python snaplyzer/snaplyzer.py <list, stop, start> --project=<tag from AWS: Key:Project Value:xyz>
+
+## Running
+
+pipenv run python snaplyzer/snaplyzer.py <command> <subcommand> <--project=PROJECT>
+
+*command* instances, volumes, snapshots
+*subcommand* - pipenv run python snaplyzer/snaplyzer.py <command> --help
+*project* optional.  It will filter out the tag from AWS
