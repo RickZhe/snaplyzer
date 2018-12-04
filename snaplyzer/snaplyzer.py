@@ -19,13 +19,19 @@ def list_instances(project):
         instances = ec2.instances.all()
 
     for i in instances:
+        #adding tags to our variables
+        tags = { t['Key']: t['Value'] for t in i.tags or [] }
         print(', '.join((
             # the attribue name is from the boto3 documentation https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html#instance 
             i.id,
             i.instance_type,
             i.placement['AvailabilityZone'],
             i.state['Name'],
-            i.public_dns_name)))
+            i.public_dns_name,
+            tags.get('Project', '<no project>')
+            )))
+            ## adding tag to our list
+
 
     return
 # as best practice to see if there's an imported function 
