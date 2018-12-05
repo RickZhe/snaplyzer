@@ -86,11 +86,13 @@ def create_snapshots(project):
     for i in instances:
         print("Stopping {0}...".format(i.id))
         i.stop()
+        i.wait_until_stopped()
         for v in i.volumes.all():
             print("Created snapshot of {0}".format(v.id))
             v.create_snapshot(Description="Created by snaplyzer")
-
-        print("Staring {0}...".format(i.id))    
+        print("Starting {0}...".format(i.id))
+        i.start()
+        i.wait_until_running() 
     print("Job's done!")
     return
 
