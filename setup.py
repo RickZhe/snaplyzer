@@ -4,8 +4,8 @@ from setuptools import setup
 setup(
     name='snaplyzer_300',
     version='0.1',
-    auther='Rick Zheng',
-    auther_email="rick.zheng@gmail.com",
+    auther='-----',
+    auther_email="-----",
     description="snaplyzer is tools manage AWS EC2 snapshots",
     license="GPLv3+",
     packages=['snaplyzer'],
