@@ -9,6 +9,8 @@ import boto3
 import botocore
 import click
 
+# This is the session configure from 'aws configure --profile snaplyzer'.
+# This is critical when other workstation needs to comunnicate with aws.
 session = boto3.Session(profile_name='snaplyzer')
 ec2 = session.resource('ec2')
 
