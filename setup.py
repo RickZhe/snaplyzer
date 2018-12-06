@@ -1,11 +1,11 @@
-# setup.py
+# make sure that 'aws configure --profile SAME TO ALL OTHER STATION'
 from setuptools import setup
 
 setup(
-    name='snaplyzer_300',
+    name='snaplyzer1',
     version='0.1',
-    auther='-----',
-    auther_email="-----",
+    author="Rick Zheng",
+    author_email="rick.zheng@gmail.com",
     description="snaplyzer is tools manage AWS EC2 snapshots",
     license="GPLv3+",
     packages=['snaplyzer'],
@@ -18,6 +18,4 @@ setup(
         [console_scripts]
         snaplyzer=snaplyzer.snaplyzer:cli
     ''',
-
-
-)
+    )
