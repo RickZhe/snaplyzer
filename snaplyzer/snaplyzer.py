@@ -137,6 +137,8 @@ def list_instances(project):
             i.placement['AvailabilityZone'],
             i.state['Name'],
             i.public_dns_name,
+            i.public_ip_address,
+            i.private_ip_address,
             tags.get('Project', '<no project>')
             )))
             ## adding tag to our list
