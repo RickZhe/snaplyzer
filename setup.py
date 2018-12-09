@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='snaplyzer1',
-    version='0.1',
+    version='0.3',
     author="Rick Zheng",
     author_email="rick.zheng@gmail.com",
     description="snaplyzer is tools manage AWS EC2 snapshots",
